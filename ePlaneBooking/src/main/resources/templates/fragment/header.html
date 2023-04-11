@@ -20,7 +20,12 @@
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Profile</a></li>
-                    <li><a class="get-a-quote" style="background-color: #ff2c2c;" href="#">Logout</a>
+                    <th:block th:if="${isSignedIn}">
+                        <li><a class="get-a-quote" style="background-color: #28a745;" href="#">Login</a>
+                    </th:block>
+                    <th:block th:unless="${isSignedIn}">
+                        <li><a class="get-a-quote" style="background-color: #ff2c2c;" href="#">Logout</a>
+                    </th:block>
                     </li>
                 </ul>
             </nav><!-- .navbar -->
